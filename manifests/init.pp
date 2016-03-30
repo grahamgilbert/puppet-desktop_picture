@@ -2,9 +2,9 @@ class desktop_picture (
     $path = '/Library/Desktop Pictures/El Capitan.jpg'
 )
 {
-    mac_profiles_handler::manage { 'com.grahamgilbert.desktop.config':
+    mac_profiles_handler::manage { 'com.grahamgilbert.config.desktop':
         ensure      => 'present',
-        file_source => template('desktop_picture/com.grahamgilbert.desktop.config.mobileconfig.erb'),  
+        file_source => template('desktop_picture/com.grahamgilbert.config.desktop.mobileconfig.erb'),
         type        => 'template',
     }
 }
